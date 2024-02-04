@@ -1,0 +1,73 @@
+.card-component {
+    width: 100%;
+    height: 95%;
+    min-width: 210px;
+    /* width: 20rem;
+    height: 26rem; */
+    /* max-width: 380px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 0;
+
+    border-radius: 20px;
+    border: 0.5px solid white;
+    background-color: rgba(100, 100, 100, 0.2);
+    color: white;
+    pointer-events: none;
+
+    h6 {
+        font-size: 3em;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background-size: cover;
+        border-radius: inherit;
+    }
+
+    & > :last-child {
+        z-index: inherit;
+    }
+}
+
+.card-component-wrap {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+
+
+/* .card-component-parent {
+    background-color: rgba(100, 100, 100, 0.2);
+    width: 23.5vw;
+    min-width: 350px;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+} */
+
+/* .card-component-parent[data-isOpen="true"] {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 4;
+} */
+
+/* .hero-img-girl-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 20px;
+} */

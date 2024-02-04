@@ -1,0 +1,66 @@
+:root {
+    --rui-color-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Aeonik Pro Bold';
+    src: url('./font/AeonikProTRIAL-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Aeonik Pro Light';
+    src: url('./font/AeonikProTRIAL-Light.otf');
+}
+
+@font-face {
+    font-family: 'Aeonik Pro Regular';
+    src: url('./font/AeonikProTRIAL-Regular.otf');
+}
+
+body {
+    font-family: 'Aeonik Pro Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+body, html {
+    width: 100vw;
+    min-width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.App {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: calc(20px + 3vw);
+    font-family: 'Aeonik Pro Bold';
+    color: black;
+    line-height: 4rem;
+}
+
+h2 {
+    font-size: calc(6px + 0.5vw);
+    font-family: 'Aeonik Pro Light';
+    color: white;
+    max-width: 700px;
+}
+
+p {
+    font-size: calc(4px + 1vw);
+    font-family: 'Aeonik Pro Regular'; 
+    color: black;
+    max-width: 750px;
+}
