@@ -1,0 +1,54 @@
+.toggle-horizontal-section {
+    width: 100%;
+    min-width: 700px;
+    height: 95vh;
+    max-height: 900px;
+    display: grid;
+    grid-template-columns: 35% 30%;
+    grid-template-rows: 70%;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.video-first {
+    grid-template-areas:
+        "video text"; 
+}
+
+.text-first {
+    grid-template-areas:
+        "text video"; 
+}
+
+.toggle-horizontal-section-content {
+    grid-area: text;
+    width: 100%;
+    text-align: start;
+    align-self: center; /* Centriranje vertikalno */
+    justify-self: center; /* Centriranje horizontalno */
+
+    h1, p {
+        color: black;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        line-height: 4rem;
+    }
+}
+
+.video-container {
+    grid-area: video;
+    height: 100%;
+    align-self: center; /* Centriranje vertikalno */
+    justify-self: center; /* Centriranje horizontalno */
+}
+
+.video-container.video {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+}

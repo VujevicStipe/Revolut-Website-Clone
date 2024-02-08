@@ -4,7 +4,9 @@ import HeroSection from "./components/heroSection/HeroSection";
 import CarouselComponent from "./components/carouselComponent/CarouselComponent";
 import VerticalHomeSection from "./components/verticalHomeSection/VerticalHomeSection";
 import HorizontalHomeSection from "./components/horizontalHomeSection/HorizontalHomeSection";
-import ToggleBackgroundSection from "./components/toggleBackgroundSection/ToggleBackgroundSection";
+import SavingsSection from "./components/savingsSection/SavingsSection";
+import TransferSection from "./components/transferSection/TransferSection";
+import InvestmentSection from "./components/investmentSection/InvestmentSection";
 
 //hero section content
 let heroH = "REVOLUCIONARNO BANKARSTVO";
@@ -42,6 +44,19 @@ let sec5P =
 let sec5Psm =
   "Kamatna stopa za valutu USD prikazana je od 01. 10. 2023., ali je podložna promjenama na dnevnoj bazi. Rast nije zajamčen. Rizik za kapital.";
 let sec5B = "Istražite značajku Štednja";
+
+//section6 content
+let sec6B = "Isprobajte";
+
+//section7 content
+let sec7H = "Brzi transferi na drugi kraj svijeta";
+let sec7P =
+  "Bilo da šaljete u Maroko ili Meksiko, slanje novca se izvršava u tren oka. A tečajevi? Odlični, baš onako kako ste načuli!";
+let sec7B = "Saznajte kako";
+let sec7V = "./assets/gridSec2.mp4";
+
+//section8 content
+let sec8H = "";
 
 function App() {
   return (
@@ -85,14 +100,29 @@ function App() {
       >
         <img src="../assets/section3img.png" alt="section3img" />
       </VerticalHomeSection>
-      <ToggleBackgroundSection
+      <SavingsSection
         title={sec5H}
         paragraph={sec5P}
         smParagraph={sec5Psm}
         btnContent={sec5B}
         btnDesign="primaryWhiteBtn"
         backgroundColor="./assets/btnActionImg1.png"
+        toggle={true}
       />
+      <TransferSection
+        btnContent={sec6B}
+        btnDesign="primaryBlackBtn"
+        toggle={true}
+      />
+      <TransferSection
+        title={sec7H}
+        paragraph={sec7P}
+        btnContent={sec7B}
+        btnDesign="primaryBlackBtn"
+        video={sec7V}
+        toggle={false}
+      />
+      <InvestmentSection btnDesign="primaryBlackBtn" toggle={true} />
     </div>
   );
 }

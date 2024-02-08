@@ -1,0 +1,24 @@
+.toggle-component {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centriranje vertikalno */
+    align-items: center; /* Centriranje horizontalno */
+}
+
+.toggle-component > *:first-child {
+    width: 100%;
+    height: 100%;
+}
+
+.toggle-component-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-component-buttons > * {
+    margin-right: 20px;
+}

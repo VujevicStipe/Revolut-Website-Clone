@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    will-change: transform;
 }
 
 @font-face {
@@ -49,6 +50,7 @@ h1 {
     font-family: 'Aeonik Pro Bold';
     color: black;
     line-height: 4rem;
+    text-transform: uppercase;
 }
 
 h2 {
