@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useWindowSize } from "../WindowSizeContext";
-import "./VerticalHomeSection.css";
+import "./ProductOverviewSection.css";
+import { useWindowSize } from "../../WindowSizeContext";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ButtonComponent from "../buttonComponent/ButtonComponent";
+import ButtonComponent from "../../buttonComponent/ButtonComponent";
 
-const VerticalHomeSection = ({
+const ProductOverviewSection = ({
   title,
   paragraph,
   smParagraph,
@@ -68,4 +68,4 @@ const VerticalHomeSection = ({
   );
 };
 
-export default VerticalHomeSection;
+export default ProductOverviewSection;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./NavBarComponent.css";
 import { useWindowSize } from "../WindowSizeContext";
 import ButtonComponent from "../buttonComponent/ButtonComponent";
-import BurgerMenuComponent from "../burgerMenuComponent/BurgerMenuComponent";
+import BurgerMenuComponent from "../BurgerComponent";
 
 const NavBarComponent = () => {
   //responsive

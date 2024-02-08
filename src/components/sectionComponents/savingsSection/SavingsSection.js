@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./SavingsSection.css";
-import ButtonComponent from "../buttonComponent/ButtonComponent";
-import ToggleComponent from "../toggleComponent/ToggleComponent";
-import CardComponent from "../cardComponent/CardComponent";
+import ToggleContent from "../../utils/ToggleContent"
+import ButtonComponent from "../../buttonComponent/ButtonComponent";
+import ToggleComponent from "../../toggleComponent/ToggleComponent";
+import CardComponent from "../../cardComponent/CardComponent";
 
 const SavingsSection = ({
   title,
@@ -43,18 +44,10 @@ const SavingsSection = ({
     },
   ];
 
-  const [selectedImage, setSelectedImage] = useState(
-    "./assets/btnActionImg1.png"
-  );
-
   const [cardIndex, setCardIndex] = useState(0);
 
   const handleButtonClick = (content) => {
-    console.log(content);
-    const selectedImageData = cardValues.find((img) => img.content === content);
-
-    setSelectedImage(selectedImageData ? selectedImageData.image : null);
-    setCardIndex(selectedImageData ? selectedImageData.id : null);
+    ToggleContent(cardValues, content, setCardIndex);
   };
 
   return (
@@ -70,6 +63,7 @@ const SavingsSection = ({
         amountOfBtns={cardValues}
         toggle={toggle}
         designType="transparentBtn"
+        selectedContent={cardValues[cardIndex].content}
       >
         <div className="toggle-card-component-wrap">
           <CardComponent
@@ -79,7 +73,7 @@ const SavingsSection = ({
           />
         </div>
       </ToggleComponent>
-      <img src={selectedImage} alt="" />
+      <img src={cardValues[cardIndex].image} alt="" />
     </div>
   );
 };

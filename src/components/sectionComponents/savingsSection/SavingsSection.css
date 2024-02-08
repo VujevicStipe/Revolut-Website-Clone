@@ -10,23 +10,18 @@
     h1, p {
         color: white;
     }
-
     h6 {
         font-size: 1.6rem;
     }
-
     h3 {
         font-size: 0.9rem;
     }
-
     h4 {
         font-size: 0.7rem;
     }
-
     h5 {
         font-size: 0.8rem;
     }
-
     img {
         position: absolute;
         z-index: -1;
@@ -36,16 +31,38 @@
     }
 }
 
-.toggle-vertical-section.black {
-    h1, p {
-        color: black;
-    }
-}
-
 .toggle-card-component-wrap {
     width: 20% !important;
     min-width: 200px;
     max-width: 280px;
     height: 80%;
     min-height: 280px;
+}
+
+.toggle-vertical-section.black {
+    h1, p {
+        color: black;
+    }
+    h1 {
+        max-width: 60%;
+    }
+    p {
+        max-width: 40%;
+        margin: 0;
+    }
+    
+    video {
+        height: 80%;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.toggle-vertical-section.center {
+    height: 65vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    h1 {
+        max-width: 70%;
+    }
 }

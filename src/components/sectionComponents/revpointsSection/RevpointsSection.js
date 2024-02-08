@@ -1,8 +1,8 @@
 import React from "react";
-import "./HorizontalHomeSection.css";
-import ButtonComponent from "../buttonComponent/ButtonComponent";
+import "./RevpointsSection.css";
+import ButtonComponent from "../../buttonComponent/ButtonComponent";
 
-const HorizontalHomeSection = ({
+const RevpointsSection = ({
   title,
   paragraph,
   btnContent,
@@ -28,4 +28,4 @@ const HorizontalHomeSection = ({
   );
 };
 
-export default HorizontalHomeSection;
+export default RevpointsSection;

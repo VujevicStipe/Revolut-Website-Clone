@@ -37,6 +37,11 @@
     outline: 1px solid black;
 }
 
+.secondary-black-btn.active {
+    background-color: black;
+    color: white;
+}
+
 .secondary-white-btn {
     color: white;
 
@@ -56,4 +61,9 @@
         background-color: white;
         color: black;
     }
+}
+
+.transparent-btn.active {
+    background-color: white;
+    color: black;
 }

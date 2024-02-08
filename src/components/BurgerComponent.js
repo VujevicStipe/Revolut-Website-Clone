@@ -1,8 +1,7 @@
 import React from 'react'
-import './BurgerMenuComponent.css'
 import { FaBars } from "react-icons/fa";
 
-const BurgerMenuComponent = () => {
+const BurgerComponent = () => {
   return (
     <div>
       <FaBars style={{color: "white"}} />
@@ -10,4 +9,4 @@ const BurgerMenuComponent = () => {
   )
 }
 
-export default BurgerMenuComponent
+export default BurgerComponent

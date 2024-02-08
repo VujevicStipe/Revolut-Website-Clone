@@ -1,0 +1,13 @@
+.privacy-policy-section {
+    width: 100%;
+    height: fit-content;
+    h2 {
+        max-width: 100%;
+        padding: 0 11rem;
+        color: black;
+    }
+    span {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./HeroSection.css";
-import ButtonComponent from "../buttonComponent/ButtonComponent";
-import CardComponent from "../cardComponent/CardComponent";
+import ButtonComponent from "../../buttonComponent/ButtonComponent";
+import CardComponent from "../../cardComponent/CardComponent";
 
 const HeroSection = ({ title, paragraph, btnContent }) => {
   const cardValues = {
