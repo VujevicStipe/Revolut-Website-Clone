@@ -46,7 +46,7 @@ const InvestmentSection = ({ btnDesign, toggle }) => {
   };
 
   return (
-    <div className="toggle-vertical-section black investmentSection">
+    <div className="toggle-vertical-section black">
       <div className="vertical-home-section-content">
         <h1>{cardValues[cardIndex]?.title}</h1>
         <p>{cardValues[cardIndex]?.paragraph1}</p>

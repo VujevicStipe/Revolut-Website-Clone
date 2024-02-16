@@ -64,17 +64,8 @@ const cardValues = [
 ];
 
 const CarouselComponent = () => {
-  //responsive
-  const { width } = useWindowSize();
-  const [carouselComponentRes, setCarouselComponentRes] = useState(false);
-  useEffect(() => {
-    if (width < 750) {
-      setCarouselComponentRes(true);
-    } else {
-      setCarouselComponentRes(false);
-    }
-  }, [width]);
-
+  const {deviceType} = useWindowSize();
+  console.log(deviceType)
   //define images
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -83,8 +74,8 @@ const CarouselComponent = () => {
     infinite: true,
     lazyLoad: true,
     speed: 300,
-    slidesToShow: carouselComponentRes ? 2 : 3,
-    centerMode: carouselComponentRes ? false : true,
+    slidesToShow: deviceType==="mobile" ? 2 : 3,
+    centerMode: deviceType==="mobile" ? false : true,
     centerPadding: 0,
     arrows: false,
     draggable: true,
@@ -93,7 +84,7 @@ const CarouselComponent = () => {
     beforeChange: (current, next) => setImageIndex(next),
     responsive: [
       {
-        breakpoint: 740,
+        breakpoint: 600,
         settings: {
           slidesToShow: 2,
         },
@@ -119,7 +110,7 @@ const CarouselComponent = () => {
 
   return (
     <motion.div
-      className={`carousel-component ${carouselComponentRes ? "sm" : ""}`}
+      className={`carousel-component ${deviceType}`}
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

@@ -9,7 +9,7 @@ const NavBarComponent = () => {
   const { width } = useWindowSize();
   const [navBarComponentRes, setNavBarComponentRes] = useState(false);
   useEffect(() => {
-    if (width < 1000) {
+    if (width < 1024) {
       setNavBarComponentRes(true);
     } else {
       setNavBarComponentRes(false);

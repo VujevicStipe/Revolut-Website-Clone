@@ -10,6 +10,7 @@ import TransferSection from "./components/sectionComponents/transferSection/Tran
 import InvestmentSection from "./components/sectionComponents/investmentSection/InvestmentSection";
 import MembershipSection from "./components/sectionComponents/membershipSection/MembershipSection";
 import PrivacyPolicySection from "./components/sectionComponents/privacyPolicySection/PrivacyPolicySection";
+import FooterSection from "./components/sectionComponents/footerSection/FooterSection";
 
 function App() {
   return (
@@ -82,6 +83,7 @@ function App() {
         btnDesign="primaryBlackBtn"
       />
       <PrivacyPolicySection />
+      <FooterSection />
     </div>
   );
 }

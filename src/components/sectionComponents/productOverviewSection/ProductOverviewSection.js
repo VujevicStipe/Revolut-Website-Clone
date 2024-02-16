@@ -14,16 +14,7 @@ const ProductOverviewSection = ({
   backgroundColor,
   children,
 }) => {
-  //responsive
-  const { width } = useWindowSize();
-  const [homeSectionRes, setHomeSectionRes] = useState(false);
-  useEffect(() => {
-    if (width < 750) {
-      setHomeSectionRes(true);
-    } else {
-      setHomeSectionRes(false);
-    }
-  }, [width]);
+  const { deviceType } = useWindowSize();
 
   //animation
   const [ref, inView] = useInView({
@@ -45,9 +36,9 @@ const ProductOverviewSection = ({
 
   return (
     <motion.div
-      className={`vertical-home-section ${backgroundColor ? "black" : ""} ${
-        homeSectionRes ? "sm" : ""
-      }`}
+      className={`vertical-home-section ${
+        backgroundColor ? "black" : ""
+      } ${deviceType}`}
     >
       <motion.div
         ref={ref}
@@ -55,7 +46,7 @@ const ProductOverviewSection = ({
         variants={homeContentVariants}
         animate={inView ? "visible" : "hidden"}
         className={`vertical-home-section-content ${
-          homeSectionRes ? "sm" : ""
+          deviceType
         }`}
       >
         <h1> {title} </h1>

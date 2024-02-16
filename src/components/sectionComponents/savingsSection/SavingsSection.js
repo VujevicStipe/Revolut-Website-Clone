@@ -55,7 +55,7 @@ const SavingsSection = ({
       <div className={`vertical-home-section-content`}>
         <h1> {title} </h1>
         <p> {paragraph} </p>
-        {smParagraph && <h2>{smParagraph}</h2>}
+        {smParagraph && <h3>{smParagraph}</h3>}
         <ButtonComponent content={btnContent} designType={btnDesign} />
       </div>
       <ToggleComponent
