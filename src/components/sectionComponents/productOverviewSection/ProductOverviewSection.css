@@ -32,7 +32,6 @@
 .vertical-home-section-content {
     width: 100%;
     max-width: 1024px;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,15 +52,18 @@
 /* responsive MOBILE & TABLET */
 .vertical-home-section-content.tablet,
 .vertical-home-section-content.mobile {
+    padding: 0 25px;
     h1 {
         font-size: calc(35px + 2.1vw);
         line-height: calc(1.8rem + 3vw);
     }
     p {
         font-size: calc(17px + 0.4vw);
+        max-width: 600px;
     }
     h3 {
         font-size: calc(12px + 0.4vw);
+        width: 100%;
     }
 }
 
@@ -69,15 +71,16 @@
 .vertical-home-section.mobile {
     min-height: 900px;
 
-    .vertical-home-section-content {
-        align-items: flex-start;
-        text-align: start;
-    }
-
     img:last-child {
         min-height: 500px;
         object-fit: cover;
         margin-bottom: calc(-2rem + 1vw);
         z-index: -1;
     }
+}
+
+.vertical-home-section-content.mobile {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
 }

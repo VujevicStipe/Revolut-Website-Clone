@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SavingsSection.css";
 import { useWindowSize } from "../../WindowSizeContext";
-import ToggleContent from "../../utils/ToggleContent"
+import ToggleContent from "../../utils/ToggleContent";
 import ButtonComponent from "../../buttonComponent/ButtonComponent";
 import ToggleComponent from "../../toggleComponent/ToggleComponent";
 import CardComponent from "../../cardComponent/CardComponent";
@@ -56,9 +56,7 @@ const SavingsSection = ({
 
   return (
     <div className={`toggle-vertical-section`}>
-      <div className={`vertical-home-section-content ${
-          deviceType
-        }`}>
+      <div className={`vertical-home-section-content ${deviceType}`}>
         <h1> {title} </h1>
         <p> {paragraph} </p>
         {smParagraph && <h3>{smParagraph}</h3>}
@@ -79,7 +77,7 @@ const SavingsSection = ({
           />
         </div>
       </ToggleComponent>
-      <img src={cardValues[cardIndex].image} alt="" />
+      <img src={cardValues[cardIndex].image} alt="" loading="lazy" />
     </div>
   );
 };

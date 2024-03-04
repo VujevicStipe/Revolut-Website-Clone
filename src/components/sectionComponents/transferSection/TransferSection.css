@@ -34,6 +34,13 @@
         & > *:not(:last-child) {
             width: 100%;
         }
+        h1 {
+            font-size: calc(35px + 2.1vw);
+            line-height: calc(1.8rem + 3vw);
+        }
+        p {
+            font-size: calc(17px + 0.4vw);
+        }
     }
     .toggle-horizontal-section-content.mobile {
         width: 90vw;
@@ -66,7 +73,7 @@
 }
 .video-first.tablet,
 .video-first.mobile {
-    min-height: 700px;
+    min-height: 800px;
     display: flex;
     grid-template-columns: 100%;
     padding: 0 25px;
@@ -84,7 +91,7 @@
 }
 .text-first.tablet,
 .text-first.mobile {
-    min-height: 700px;
+    min-height: 800px;
     display: flex;
     grid-template-columns: 100%;
     padding: 0 25px;

@@ -31,11 +31,13 @@ const HeroSection = ({ title, paragraph, btnContent }) => {
         className="hero-girl"
         src="./assets/hero-img-girl.png"
         alt="hero-img-girl"
+        loading="lazy"
       />
       <img
         className="hero-sky"
         src="./assets/hero-img-sky.png"
         alt="hero-img-sky"
+        loading="lazy"
       />
     </div>
   );

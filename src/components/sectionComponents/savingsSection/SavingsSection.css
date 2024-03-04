@@ -1,5 +1,6 @@
 .toggle-vertical-section {
     width: 100%;
+    padding: 0 25px;
     height: 95vh;
     display: flex;
     flex-direction: column;
@@ -68,10 +69,17 @@
 
 .toggle-vertical-section.center.tablet,
 .toggle-vertical-section.center.mobile {
-    height: 500px;
+    height: 400px;
+    margin-top: 40px;
     h1 {
         font-size: calc(30px + 2.1vw);
         line-height: calc(1.8rem + 3vw);
+        text-align: center;
+    }
+}
+.toggle-vertical-section.center.mobile {
+    justify-content: flex-start;
+    h1 {
         text-align: start;
     }
 }

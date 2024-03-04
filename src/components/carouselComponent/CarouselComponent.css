@@ -5,10 +5,12 @@
   width: 100%;
   max-width: 850px;
   height: fit-content;
+  overflow: hidden;
 
   img {
     min-width: 100%;
     object-fit: cover;
+    overflow: hidden;
   }
   .slide {
     width: 100%;
@@ -37,8 +39,8 @@
 
  /* responsive */
 .carousel-component.mobile {
-  width: fit-content;
   max-width: 550px;
+  min-width: 550px;
   align-self: self-start;
   .slick-dots {
     left: -7.5rem;
