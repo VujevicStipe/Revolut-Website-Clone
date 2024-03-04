@@ -1,0 +1,96 @@
+.toggle-horizontal-section {
+    width: 100%;
+    min-width: 700px;
+    max-width: 1024px;
+    height: 95vh;
+    max-height: 900px;
+    display: grid;
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 70%;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    .toggle-horizontal-section-content {
+        grid-area: text;
+        width: 100%;
+        text-align: start;
+        align-self: center; 
+        justify-self: center; 
+    
+        h1, p {
+            color: black;
+            margin-bottom: 25px;
+        }
+    }
+    .toggle-horizontal-section-content.tablet,
+    .toggle-horizontal-section-content.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        & > *:not(:last-child) {
+            width: 100%;
+        }
+    }
+    .toggle-horizontal-section-content.mobile {
+        width: 90vw;
+        text-align: start;
+        align-items: flex-start;
+    }
+    
+    .video-container {
+        grid-area: video;
+        height: 100%;
+        align-self: center;
+        justify-self: center; 
+    }
+
+    .video-container.tablet,
+    .video-container.mobile {
+        height: 400px;
+    }
+    .video-container.video {
+        width: 20%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.video-first {
+    width: 100%;
+    grid-template-areas:
+        "video text"; 
+}
+.video-first.tablet,
+.video-first.mobile {
+    min-height: 700px;
+    display: flex;
+    grid-template-columns: 100%;
+    padding: 0 25px;
+    flex-direction: column;
+    .video-container.tablet,
+    .video-container.tablet {
+        max-height: 500px;
+    }
+}
+
+.text-first {
+    width: 100%;
+    grid-template-areas:
+        "text video"; 
+}
+.text-first.tablet,
+.text-first.mobile {
+    min-height: 700px;
+    display: flex;
+    grid-template-columns: 100%;
+    padding: 0 25px;
+    flex-direction: column;
+    .video-container.tablet,
+    .video-container.tablet {
+        max-height: 500px;
+    }
+}

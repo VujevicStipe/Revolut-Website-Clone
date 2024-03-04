@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ButtonComponent.css";
 
-const ButtonComponent = ({ content, designType, onClick }) => {
+const ButtonComponent = ({ content, designType, isActive, onClick }) => {
   let applyBtnStyle;
   switch (designType) {
     case "primaryBlackBtn":
@@ -22,7 +22,10 @@ const ButtonComponent = ({ content, designType, onClick }) => {
   }
 
   return (
-    <div className={`button-component ${applyBtnStyle} `} onClick={onClick}>
+    <div
+      className={`button-component ${applyBtnStyle} ${isActive ? 'active' : ''} `}
+      onClick={onClick}
+    >
       {content}
     </div>
   );

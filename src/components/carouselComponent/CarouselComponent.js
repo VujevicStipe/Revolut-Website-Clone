@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useWindowSize } from "../WindowSizeContext";
+import React, { useState } from "react";
 import "./CarouselComponent.css";
+import { useWindowSize } from "../WindowSizeContext";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -14,7 +14,7 @@ const cardValues = [
     whenPosted: "just now",
     pointsEarned: "50",
     icon: "grocery",
-    backgroundImage: './assets/cardGirl.png',
+    backgroundImage: "./assets/cardGirl.png",
   },
   {
     moneyAmount: "2.540",
@@ -23,7 +23,7 @@ const cardValues = [
     whenPosted: "",
     pointsEarned: "740",
     icon: "apartment",
-    backgroundImage: './assets/cardRevpoints.png',
+    backgroundImage: "./assets/cardRevpoints.png",
   },
   {
     moneyAmount: "4.500€",
@@ -32,7 +32,7 @@ const cardValues = [
     whenPosted: "Weekend trip",
     pointsEarned: "21.5",
     icon: "invoice",
-    backgroundImage: './assets/cardWeekend.png',
+    backgroundImage: "./assets/cardWeekend.png",
   },
   {
     moneyAmount: "250€",
@@ -41,7 +41,7 @@ const cardValues = [
     whenPosted: "50min ago",
     pointsEarned: "75",
     icon: "invoice",
-    backgroundImage: './assets/cardKiddo.png',
+    backgroundImage: "./assets/cardKiddo.png",
   },
   {
     moneyAmount: "2.843€",
@@ -50,7 +50,7 @@ const cardValues = [
     whenPosted: "08:28",
     pointsEarned: "15",
     icon: "house",
-    backgroundImage: './assets/cardBills.png',
+    backgroundImage: "./assets/cardBills.png",
   },
   {
     moneyAmount: "20.126¥",
@@ -59,22 +59,12 @@ const cardValues = [
     whenPosted: "11:30",
     pointsEarned: "300",
     icon: "cutlery",
-    backgroundImage: './assets/cardJPN.png',
+    backgroundImage: "./assets/cardJPN.png",
   },
 ];
 
 const CarouselComponent = () => {
-  //responsive
-  const { width } = useWindowSize();
-  const [carouselComponentRes, setCarouselComponentRes] = useState(false);
-  useEffect(() => {
-    if (width < 750) {
-      setCarouselComponentRes(true);
-    } else {
-      setCarouselComponentRes(false);
-    }
-  }, [width]);
-
+  const {deviceType} = useWindowSize();
   //define images
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -83,8 +73,8 @@ const CarouselComponent = () => {
     infinite: true,
     lazyLoad: true,
     speed: 300,
-    slidesToShow: carouselComponentRes ? 2 : 3,
-    centerMode: carouselComponentRes ? false : true,
+    slidesToShow: deviceType==="mobile" ? 2 : 3,
+    centerMode: deviceType==="mobile" ? false : true,
     centerPadding: 0,
     arrows: false,
     draggable: true,
@@ -93,7 +83,7 @@ const CarouselComponent = () => {
     beforeChange: (current, next) => setImageIndex(next),
     responsive: [
       {
-        breakpoint: 740,
+        breakpoint: 600,
         settings: {
           slidesToShow: 2,
         },
@@ -119,7 +109,7 @@ const CarouselComponent = () => {
 
   return (
     <motion.div
-      className={`carousel-component ${carouselComponentRes ? "sm" : ""}`}
+      className={`carousel-component ${deviceType}`}
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

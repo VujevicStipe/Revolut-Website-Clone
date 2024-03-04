@@ -3,14 +3,20 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    
+    .separator {
+        width: 17%;
+    }
 }
 
-.navbar-items-component.sm {
-    justify-content: flex-end !important;
+/* responsive TABLET & MOBILE */
+
+.navbar-component.tablet,
+.navbar-component.mobile {
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.separator {
-    width: 23%;
-}

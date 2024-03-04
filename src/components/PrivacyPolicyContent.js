@@ -1,0 +1,5 @@
+const PrivacyPolicyContent = {
+    privacyPolicy: {
+    }
+    
+}

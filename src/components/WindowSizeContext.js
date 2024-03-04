@@ -23,8 +23,21 @@ export const WindowSizeProvider = ({ children }) => {
     };
   }, []);
 
+  // Dodajte ovdje logiku za određivanje deviceType
+  const getDeviceType = (width) => {
+    if (width < 720) {
+      return "mobile";
+    } else if (width < 1024) {
+      return "tablet";
+    } else {
+      return "desktop";
+    }
+  };
+
+  const deviceType = getDeviceType(windowSize.width);
+
   return (
-    <windowSizeContext.Provider value={windowSize}>
+    <windowSizeContext.Provider value={{ ...windowSize, deviceType }}>
       {children}
     </windowSizeContext.Provider>
   );
@@ -32,6 +45,5 @@ export const WindowSizeProvider = ({ children }) => {
 
 export const useWindowSize = () => {
   const context = useContext(windowSizeContext);
-
-  return context
+  return context;
 };
