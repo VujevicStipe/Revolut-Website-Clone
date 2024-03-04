@@ -2,37 +2,45 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .carousel-component {
-  width: 50rem;
+  width: 100%;
+  max-width: 850px;
   height: fit-content;
+
+  img {
+    min-width: 100%;
+    object-fit: cover;
+  }
+  .slide {
+    width: 100%;
+    height: 410px;
+    margin: 0 auto;
+  }
+  .slide {
+    transform: scale(0.8);
+    transition: transform 300ms;
+    opacity: 0.5;
+  }
+  .activeSlide {
+    min-width: 180px;
+    transform: scale(1);
+    opacity: 1;
+    width: fit-content;
+  }
+  .slick-dots {
+    bottom: -5px;
+  }
+  
+  .slick-dots li {
+    margin: 0;
+  }
 }
+
  /* responsive */
-.carousel-component.sm {
-  width: 30rem !important;
-}
-
-.slide {
-  width: 250px;
-  height: 410px;
-  margin: 0 auto;
-}
-
-.slide {
-  transform: scale(0.8);
-  transition: transform 300ms;
-  opacity: 0.5;
-}
-
-.activeSlide {
-  min-width: 200px;
-  transform: scale(1);
-  opacity: 1;
+.carousel-component.mobile {
   width: fit-content;
-}
-
-.slick-dots {
-  bottom: -5px;
-}
-
-.slick-dots li {
-  margin: 0;
+  max-width: 550px;
+  align-self: self-start;
+  .slick-dots {
+    left: -7.5rem;
+  }
 }
