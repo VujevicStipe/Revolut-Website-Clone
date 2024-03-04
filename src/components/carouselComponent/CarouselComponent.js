@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./CarouselComponent.css";
 import { useWindowSize } from "../WindowSizeContext";
 import Slider from "react-slick";
@@ -65,7 +65,6 @@ const cardValues = [
 
 const CarouselComponent = () => {
   const {deviceType} = useWindowSize();
-  console.log(deviceType)
   //define images
   const [imageIndex, setImageIndex] = useState(0);
 

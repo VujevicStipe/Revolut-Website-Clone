@@ -1,4 +1,8 @@
 import "./App.css";
+import {
+  WindowSizeProvider,
+  useWindowSize,
+} from "./components/WindowSizeContext";
 import Content from "./components/Content";
 import HeaderSection from "./components/sectionComponents/headerSection/HeaderSection";
 import HeroSection from "./components/sectionComponents/heroSection/HeroSection";
@@ -13,6 +17,7 @@ import PrivacyPolicySection from "./components/sectionComponents/privacyPolicySe
 import FooterSection from "./components/sectionComponents/footerSection/FooterSection";
 
 function App() {
+  const { deviceType } = useWindowSize();
   return (
     <div className="App">
       <HeaderSection />
@@ -35,9 +40,7 @@ function App() {
         btnContent={Content.revpoints.button}
         btnDesign="primaryWhiteBtn"
         backgroundImage="./assets/section2bckg.png"
-      >
-        <img src="./assets/section2img.png" alt="section2img2" />
-      </RevpointsSection>
+      ></RevpointsSection>
       <ProductOverviewSection
         title={Content.overview2.heading}
         paragraph={Content.overview2.paragraph}
@@ -45,18 +48,30 @@ function App() {
         btnDesign="primaryWhiteBtn"
         backgroundColor="black"
       >
-        <video autoPlay loop muted playsInline width="640" height="360">
-          <source src="../assets/revolut-cards.mp4" type="video/mp4" />
+        <video
+          key={deviceType}
+          autoPlay
+          loop
+          muted
+          playsInline
+          width="640"
+          height="360"
+        >
+          {deviceType !== "mobile" ? (
+            <source src="/assets/revolut-cards.mp4" type="video/mp4" />
+          ) : (
+            <source src="/assets/cards-mobile.mp4" type="video/mp4" />
+          )}
         </video>
       </ProductOverviewSection>
       <ProductOverviewSection
-        title={Content.overview2.heading}
-        paragraph={Content.overview2.paragraph}
-        btnContent={Content.overview2.button}
+        title={Content.overview3.heading}
+        paragraph={Content.overview3.paragraph}
+        btnContent={Content.overview3.button}
         btnDesign="primaryWhiteBtn"
         backgroundColor="black"
       >
-        <img src="../assets/section3img.png" alt="section3img" />
+        <img src="../assets/security-section.png" alt="section3img" />
       </ProductOverviewSection>
       <SavingsSection
         title={Content.savings.heading}

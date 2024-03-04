@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import "../savingsSection/SavingsSection.css";
+import { useWindowSize } from "../../WindowSizeContext";
 import ToggleComponent from "../../toggleComponent/ToggleComponent";
 import ButtonComponent from "../../buttonComponent/ButtonComponent";
 import ToggleContent from "../../utils/ToggleContent";
 
 const InvestmentSection = ({ btnDesign, toggle }) => {
+  // responsive
+  const { deviceType } = useWindowSize();
   const cardValues = [
     {
       id: 0,
@@ -47,7 +49,7 @@ const InvestmentSection = ({ btnDesign, toggle }) => {
 
   return (
     <div className="toggle-vertical-section black">
-      <div className="vertical-home-section-content">
+      <div className={`vertical-home-section-content ${deviceType}`}>
         <h1>{cardValues[cardIndex]?.title}</h1>
         <p>{cardValues[cardIndex]?.paragraph1}</p>
         <p>{cardValues[cardIndex]?.paragraph2}</p>

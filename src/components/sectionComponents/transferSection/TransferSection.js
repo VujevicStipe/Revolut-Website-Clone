@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./TransferSection.css";
+import { useWindowSize } from "../../WindowSizeContext";
 import ToggleContent from "../../utils/ToggleContent";
 import ButtonComponent from "../../buttonComponent/ButtonComponent";
 import ToggleComponent from "../../toggleComponent/ToggleComponent";
 
 const TransferSection = ({ title, paragraph, btnDesign, video, toggle }) => {
+  // responsive
+  const { deviceType } = useWindowSize();
+
   const cardValues = [
     {
       id: 0,
@@ -45,9 +49,9 @@ const TransferSection = ({ title, paragraph, btnDesign, video, toggle }) => {
     <div
       className={`toggle-horizontal-section ${
         toggle ? "text-first" : "video-first"
-      }`}
+      } ${deviceType}`}
     >
-      <div className="toggle-horizontal-section-content">
+      <div className={`toggle-horizontal-section-content ${deviceType}`}>
         <h1>{toggle ? cardValues[cardIndex]?.title : title}</h1>
         <p>{toggle ? cardValues[cardIndex]?.paragraph : paragraph}</p>
         <ButtonComponent
@@ -55,7 +59,7 @@ const TransferSection = ({ title, paragraph, btnDesign, video, toggle }) => {
           designType={btnDesign}
         />
       </div>
-      <div className="video-container">
+      <div className={`video-container ${deviceType}`}>
         <ToggleComponent
           onClick={handleButtonClick}
           amountOfBtns={cardValues}
@@ -64,7 +68,7 @@ const TransferSection = ({ title, paragraph, btnDesign, video, toggle }) => {
           selectedContent={cardValues[cardIndex].content}
         >
           <video
-            className="video"
+            className={`video ${deviceType}`}
             key={cardIndex}
             autoPlay
             loop

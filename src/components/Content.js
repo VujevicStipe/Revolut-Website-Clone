@@ -24,10 +24,10 @@ const Content = {
     button: "Odaberite svoju karticu",
   },
   overview3: {
-    heading: "SVEOBUHVATNA SIGURNOST",
+    heading: "POTPUNO LICENCIRANA BANKA S VRHUNSKOM ZASTITOM",
     paragraph:
-      "Ne samo da smo na raspolaganju i pratimo 0-24 vaša sredstva, već naša puna bankarska dozvola osigurava da za vaš novac jamči Litavsko državno društvo za osiguranje depozita i ulaganja (lit. Indėlių ir investicijų draudimas). A dobivate i podatke o IBAN računu.",
-    button: "Više informacija",
+      "Sigurnost je u središtu svega što radimo, zahvaljujući timu za prevenciju prijevara od 2 500 članova, koji radi 24 sata dnevno, sedam dana u tjednu. A budući da smo licencirana banka, možete biti mirni znajući da je vaš novac uvijek zaštićen sustavom osiguranja depozita.",
+    button: "Istražite sigurnost",
   },
   savings: {
     heading: "NEKA VASA STEDNJA PROCVJETA",

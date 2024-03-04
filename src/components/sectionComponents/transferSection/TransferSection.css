@@ -11,41 +11,86 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+
+    .toggle-horizontal-section-content {
+        grid-area: text;
+        width: 100%;
+        text-align: start;
+        align-self: center; 
+        justify-self: center; 
     
-}
+        h1, p {
+            color: black;
+            margin-bottom: 25px;
+        }
+    }
+    .toggle-horizontal-section-content.tablet,
+    .toggle-horizontal-section-content.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        & > *:not(:last-child) {
+            width: 100%;
+        }
+    }
+    .toggle-horizontal-section-content.mobile {
+        width: 90vw;
+        text-align: start;
+        align-items: flex-start;
+    }
+    
+    .video-container {
+        grid-area: video;
+        height: 100%;
+        align-self: center;
+        justify-self: center; 
+    }
 
-.video-first {
-    grid-template-areas:
-        "video text"; 
-}
-
-.text-first {
-    grid-template-areas:
-        "text video"; 
-}
-
-.toggle-horizontal-section-content {
-    grid-area: text;
-    width: 100%;
-    text-align: start;
-    align-self: center; /* Centriranje vertikalno */
-    justify-self: center; /* Centriranje horizontalno */
-
-    h1, p {
-        color: black;
-        margin-bottom: 25px;
+    .video-container.tablet,
+    .video-container.mobile {
+        height: 400px;
+    }
+    .video-container.video {
+        width: 20%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
-.video-container {
-    grid-area: video;
-    height: 100%;
-    align-self: center; /* Centriranje vertikalno */
-    justify-self: center; /* Centriranje horizontalno */
+.video-first {
+    width: 100%;
+    grid-template-areas:
+        "video text"; 
+}
+.video-first.tablet,
+.video-first.mobile {
+    min-height: 700px;
+    display: flex;
+    grid-template-columns: 100%;
+    padding: 0 25px;
+    flex-direction: column;
+    .video-container.tablet,
+    .video-container.tablet {
+        max-height: 500px;
+    }
 }
 
-.video-container.video {
-    width: 20%;
-    height: 100%;
-    object-fit: cover;
+.text-first {
+    width: 100%;
+    grid-template-areas:
+        "text video"; 
+}
+.text-first.tablet,
+.text-first.mobile {
+    min-height: 700px;
+    display: flex;
+    grid-template-columns: 100%;
+    padding: 0 25px;
+    flex-direction: column;
+    .video-container.tablet,
+    .video-container.tablet {
+        max-height: 500px;
+    }
 }

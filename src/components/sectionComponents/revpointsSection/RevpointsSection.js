@@ -1,5 +1,6 @@
 import React from "react";
 import "./RevpointsSection.css";
+import { useWindowSize } from "../../WindowSizeContext";
 import ButtonComponent from "../../buttonComponent/ButtonComponent";
 
 const RevpointsSection = ({
@@ -10,19 +11,20 @@ const RevpointsSection = ({
   backgroundImage,
   children,
 }) => {
+  const { deviceType } = useWindowSize();
   return (
     <div
-      className="horizontal-home-section"
+      className={`horizontal-home-section ${deviceType}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
       }}
     >
-      {children}
-      <div className="horizontal-home-section-content">
+      <img src="./assets/section2img.png" alt="section2img2" />
+      <div className={`horizontal-home-section-content ${deviceType}`}>
         <h1> {title} </h1>
         <p> {paragraph} </p>
-        <ButtonComponent content={btnContent} designType={btnDesign}/>
+        <ButtonComponent content={btnContent} designType={btnDesign} />
       </div>
     </div>
   );
