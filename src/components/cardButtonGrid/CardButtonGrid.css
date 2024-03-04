@@ -1,0 +1,26 @@
+.card-button-grid {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-button-grid > *:first-child {
+    margin: 20px 0;
+    width: 3.2rem;
+    height: 80%;
+    min-height: 280px;
+}
+
+.card-buttons {
+    width: 55%;
+    height: 20%;
+    max-width: 600px;
+    min-width: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

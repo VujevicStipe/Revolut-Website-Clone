@@ -2,11 +2,19 @@ import React, { useEffect, useState } from "react";
 import "./NavBarComponent.css";
 import { useWindowSize } from "../WindowSizeContext";
 import ButtonComponent from "../buttonComponent/ButtonComponent";
-import BurgerMenuComponent from "../BurgerComponent";
+import BurgerMenuComponent from "../burgerMenuComponent/BurgerMenuComponent";
 
 const NavBarComponent = () => {
   //responsive
-  const { deviceType } = useWindowSize();
+  const { width } = useWindowSize();
+  const [navBarComponentRes, setNavBarComponentRes] = useState(false);
+  useEffect(() => {
+    if (width < 1000) {
+      setNavBarComponentRes(true);
+    } else {
+      setNavBarComponentRes(false);
+    }
+  }, [width]);
 
   const navigationContent = [
     { label: "Osobno", designType: "secondaryWhiteBtn" },
@@ -14,10 +22,12 @@ const NavBarComponent = () => {
     { label: "Revolut <18", designType: "secondaryWhiteBtn" },
     { label: "Tvrtka", designType: "secondaryWhiteBtn" },
   ];
+
   const logRegContent = [
     { label: "Prijava", designType: "secondaryWhiteBtn" },
     { label: "Registracija", designType: "primaryWhiteBtn" },
   ];
+
   const generateButton = (buttonData, index) => {
     return (
       <ButtonComponent
@@ -30,6 +40,7 @@ const NavBarComponent = () => {
       />
     );
   };
+
   const renderButtons = () => {
     return (
       <>
@@ -45,9 +56,9 @@ const NavBarComponent = () => {
   };
 
   return (
-    <div className={`navbar-component ${deviceType}`}>
-      {deviceType==="desktop" && renderButtons()}
-      {deviceType!=="desktop" && <BurgerMenuComponent className="menu-burger" />}
+    <div className={`navbar-component ${navBarComponentRes ? "sm" : ""}`}>
+      {!navBarComponentRes && renderButtons()}
+      {navBarComponentRes && <BurgerMenuComponent className="menu-burger" />}
     </div>
   );
 };
