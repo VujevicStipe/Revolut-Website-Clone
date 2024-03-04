@@ -45,21 +45,28 @@
 
     .horizontal-home-section-content.tablet,
     .horizontal-home-section-content.mobile {
-        width: 100%;
-        justify-content: center;
-        align-items: flex-start;
+        min-width: 100%;
+        align-items: center;
         position: relative;
         margin-top: 4rem;
         padding: 0 25px;
+        text-align: center;
 
         h1 {
             font-size: calc(35px + 2.1vw);
             line-height: calc(1.8rem + 3vw);
+            min-width: 100%;
         }
         p {
             font-size: calc(17px + 0.4vw);
+            min-width: 100%;
+            max-width: 600px;
         }
     }
+}
+.horizontal-home-section-content.mobile {
+    text-align: start !important;
+    align-items: flex-start !important;
 }
 
 /* responsive MOBILE */
