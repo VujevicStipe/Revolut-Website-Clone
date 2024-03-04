@@ -68,12 +68,18 @@
 
 .toggle-vertical-section.center.tablet,
 .toggle-vertical-section.center.mobile {
-    height: 300px;
+    height: 500px;
+    h1 {
+        font-size: calc(30px + 2.1vw);
+        line-height: calc(1.8rem + 3vw);
+        text-align: start;
+    }
 }
 
 /* responsive TABLET & MOBILE */
 .toggle-vertical-section {
     min-height: 900px;
+    max-height: 950px;
     .vertical-home-section-content.mobile {
         align-items: flex-start;
         text-align: start;
