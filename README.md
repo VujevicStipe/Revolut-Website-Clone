@@ -1,6 +1,6 @@
 # React Revolut Clone
 
-This React project aims to replicate the structure and features of an existing webpage, specifically the Revolut website, through the use of components for a dynamic and responsive user interface. The goal of this project is to provide hands-on experience in React development by slicing and recreating various sections of the chosen webpage.
+This React project aims to replicate the structure and features of an existing webpage, specifically the Revolut website, through the use of components for a dynamic and responsive user interface. The primary goal of this project is to provide practical experience in React development by slicing and recreating various sections of the chosen webpage.
 
 ## Overview
 
