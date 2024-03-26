@@ -13,13 +13,14 @@ The project focuses on dissecting the chosen webpage and breaking it down into r
 - **Code Modularity:** Components are organized in a modular fashion, enabling easy maintenance and future enhancements. Each component focuses on a specific functionality or section of the webpage.
 - **Responsive Design:** The project is designed to be responsive across various devices and screen sizes, ensuring optimal user experience regardless of the platform.
 
+## Live Demo
+
+You can view the live demo of the project [here](https://splendid-raindrop-e72f2c.netlify.app/).
+
 ## Usage
 
 Feel free to explore the components and modify the code according to your requirements. Contributions and feedback are welcome!
 
-## Live Demo
-
-You can view the live demo of the project [here](https://splendid-raindrop-e72f2c.netlify.app/).
 
 ## Credits
 
