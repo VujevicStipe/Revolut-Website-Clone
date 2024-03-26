@@ -1,6 +1,6 @@
 # React Revolut Clone
 
-This React project aims to replicate the structure and features of an existing webpage, specifically the Revolut website, through the use of components for a dynamic and responsive user interface. The primary goal of this project is to provide practical experience in React development by slicing and recreating various sections of the chosen webpage.
+This React project aims to replicate the structure and features of the Revolut website through the use of components for a dynamic and responsive user interface. The primary goal is to provide practical experience in React development by slicing and recreating various sections of the chosen webpage.
 
 ## Overview
 
@@ -16,6 +16,10 @@ The project focuses on dissecting the chosen webpage and breaking it down into r
 ## Usage
 
 Feel free to explore the components and modify the code according to your requirements. Contributions and feedback are welcome!
+
+## Live Demo
+
+You can view the live demo of the project [here](https://splendid-raindrop-e72f2c.netlify.app/).
 
 ## Credits
 
