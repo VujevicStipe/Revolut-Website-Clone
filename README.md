@@ -10,7 +10,7 @@ You can view the live demo of the project [here](https://splendid-raindrop-e72f2
 
 The project focuses on dissecting the chosen webpage and breaking it down into reusable components. Each component encapsulates a specific section of the webpage, such as navigation bars, card displays, transaction panels, etc. By modularizing the code in this manner, we ensure better maintainability, scalability, and reusability throughout the project.
 
-![Alt Text](./public/assets/showcaseRevolut.png)
+![Alt Text](./public/assets/showcaseRevolut1.png)
 
 ## Features
 
