@@ -24,18 +24,20 @@
     src: url('./font/AeonikProTRIAL-Regular.otf');
 }
 
+body, html {
+    width: 100vw;
+    min-width: 100%;
+    height: fit-content;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    overflow-y: scroll;
+    word-wrap: break-word;
+}
+
 body {
     font-family: 'Aeonik Pro Bold', sans-serif;
     display: flex;
     justify-content: center;
-}
-
-body, html {
-    width: 100vw;
-    min-width: 100%;
-    overflow: hidden;
-    overflow-y: scroll;
-    word-wrap: break-word;
 }
 
 .App {

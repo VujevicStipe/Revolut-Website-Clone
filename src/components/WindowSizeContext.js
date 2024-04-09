@@ -23,7 +23,6 @@ export const WindowSizeProvider = ({ children }) => {
     };
   }, []);
 
-  // Dodajte ovdje logiku za određivanje deviceType
   const getDeviceType = (width) => {
     if (width < 720) {
       return "mobile";
